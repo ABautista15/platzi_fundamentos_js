@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Closures</title>
+</head>
+<body>
+    <script>
+        //closures: funciones que retornan el estado de las vaariables y recuerdan el estado de las variables
+        function crearSaludo(finalFrase){
+            return function(nombre){
+                console.log(`Hola ${nombre} ${finalFrase}`)
+            }
+        }
+
+        const saludoArgentino = crearSaludo('che')
+        const saludoMexicano = crearSaludo('guey')
+        const saludoColombiano = crearSaludo('parce')
+
+        saludoArgentino('adrian')
+        saludoMexicano('adrian')
+        saludoColombiano('adrian')
+    </script>
+</body>
+</html>
