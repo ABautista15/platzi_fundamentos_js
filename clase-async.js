@@ -20,7 +20,7 @@ function onError (id) {
 }
 
 var ids = [1,2,3,4,5,6,7]
-var promesas = ids.map(id=>obtenerPersonaje(id))
+var promesas = ids.map(id => obtenerPersonaje(id))
 Promise
     .all(promesas)
     .then(personaje=> console.log(personaje))

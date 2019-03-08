@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-        //closures: funciones que retornan el estado de las vaariables y recuerdan el estado de las variables
+        //closures: funciones que retornan una funcion y recuerdan el estado de las variables
         function crearSaludo(finalFrase){
             return function(nombre){
                 console.log(`Hola ${nombre} ${finalFrase}`)
